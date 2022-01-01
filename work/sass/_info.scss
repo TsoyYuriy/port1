@@ -1,0 +1,72 @@
+.info {
+   margin-bottom: 100px;
+   @include tablet-600 {
+      margin-bottom: 300px;
+   }
+}
+.about {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   @include tablet-900 {
+      align-items: flex-start;
+      background: url(../design/info-img1.png) top right no-repeat;
+   }
+}
+.minititle {
+   @include text (bold, 24px, 40px);
+   color: $pink;
+   letter-spacing: 0.1em;
+   margin-bottom: 40px;
+   text-transform: uppercase;
+   &--center {
+      text-align: center;
+      @include tablet-900 {
+         text-align: left;
+      }
+   }
+}
+.text {
+   @include text (300, 18px, 28px);
+   &--margin {
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: center;
+      @include tablet-900 {
+         text-align: left;
+         margin-bottom: 70px;
+      }
+   }
+   @include tablet-600 {
+      @include text (300, 18px, 40px);
+   }
+   @include tablet-900 {
+      max-width: 470px;
+   }
+}
+.info-message {
+   background: #FCDDD4;
+   padding: 10px 38px;
+   border-left: 10px solid #ED4D47;
+   margin-bottom: 160px;
+   @include tablet-900 {
+      max-width: 540px;
+   }
+}
+.message__text {
+   @include text (500, 21px, 29px);
+   @include tablet-600 {
+      @include text (500, 24px, 36px);
+   }
+}
+.apply {
+   @include tablet-900 {
+      display: flex;
+      justify-content: flex-end;
+      background: url(../design/info-img2.png) no-repeat;
+      background-position: -40%;
+   }
+   @include desktop {
+      background-position: -22%;
+   }
+}

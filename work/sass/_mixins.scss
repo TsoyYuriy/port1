@@ -1,0 +1,28 @@
+
+@mixin tablet-400 {
+   @media (min-width: 400px) {
+      @content;
+   }
+}
+@mixin tablet-600 {
+   @media (min-width: 600px) {
+      @content;
+   }
+}
+@mixin tablet-900 {
+   @media (min-width: 900px) {
+      @content;
+   }
+}
+@mixin desktop {
+   @media (min-width: 1200px) {
+      @content;
+   }
+}
+
+@mixin text ($font-weight, $font-size, $line-height) {
+   font-weight: $font-weight;
+   font-size: $font-size;
+   line-height: $line-height;
+   text-decoration: none;
+}

@@ -1,0 +1,98 @@
+.header {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   margin-bottom: 40px;
+   @include tablet-400 {
+      margin-bottom: 90px;
+      margin-top: 40px;
+   }
+}
+.logo {
+   background: url(../design/logo.svg) no-repeat;
+   width: 212px;
+   height: 50px;
+   display: inline-block;
+}
+#input {
+   display: none;
+}
+.input__label {
+   margin-left: auto;
+   @include tablet-400 {
+      display: none;
+   }
+}
+.input__burger,
+.input__burger::before,
+.input__burger::after {
+   width: 40px;
+   height: 2px;
+   background: $white;
+   display: inline-block;
+   position: relative;
+}
+.input__burger::before {
+   content: "";
+   position: absolute;
+   top: -8px;
+   right: 0;
+}
+.input__burger::after {
+   content: "";
+   position: absolute;
+   top: 8px;
+   right: 0;
+}
+#input:checked~.top-menu {
+   visibility: hidden;
+   @include tablet-400 {
+      visibility: visible;
+   }
+}
+.top-menu {
+   flex-grow: 1;
+   visibility: visible;
+   @include tablet-600 {
+      flex-grow: 0;
+      margin-left: auto;
+   }
+}
+.menu {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   flex-grow: 1;
+   margin-top: 25px;
+   @include tablet-400 {
+      flex-direction: row;
+   }
+   @include tablet-600 {
+      flex-grow: 0;
+      margin-left: auto;
+   }
+   &__link {
+      @include text (bold, 16px, 19px);
+      color: $white;
+      margin-bottom: 20px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      @include tablet-400 {
+         margin-left: 18px;
+      }
+      @include tablet-600 {
+         margin-left: 40px;
+      }
+      &--red {
+         background: #EE4D47;
+         border-radius: 5px;
+         padding: 20px 24px;
+      }
+      &:hover {
+         color: red;
+      }
+      &:hover:last-child {
+         color: $white;
+      }
+   }
+}

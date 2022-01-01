@@ -1,0 +1,35 @@
+@import "variables";
+@import "mixins";
+@import "start";
+@import "header";
+@import "button";
+@import "info";
+@import "faq";
+@import "reviews";
+@import "footer";
+
+.background {
+   max-width: 1600px;
+   margin: 0 auto;
+   background: url(../design/bg-img.png) left no-repeat;
+   padding-bottom: 210px;
+   margin-bottom: 140px;  
+   @include tablet-900 {
+      padding-bottom: 290px;
+   }
+}
+.title {
+   font-family: "DM Serif Display", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   max-width: 747px;
+   @include text (normal, 50px, 100%);
+   color: $white;
+   &--margin {
+      margin-bottom: 120px;
+   }
+   @include tablet-600 {
+      @include text (normal, 70px, 100%);
+   }
+   @include tablet-900 {
+      @include text (normal, 90px, 100%);
+   }
+}

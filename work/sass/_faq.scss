@@ -1,0 +1,90 @@
+.background-pink {
+   background: #FDEDE8;
+   margin-bottom: 100px;
+}
+.faq {
+   @include tablet-600 {
+      background: url(../design/faq-img.png) right 87% no-repeat;
+      background-size: 50%;
+      padding-top: 70px;
+   }
+   @include tablet-900 {
+      background: url(../design/faq-img.png) right 87% no-repeat;
+      background-size: 50%;
+      padding-top: 270px;
+   }
+   &__title {
+      font-family: "DM Serif Display", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      @include text (normal, 30px, 140%);
+      &--margin {
+         max-width: 460px;
+         margin-bottom: 170px;
+      }
+      @include tablet-600 {
+         @include text (normal, 40px, 140%);
+      }
+   }
+}
+.faq-question {
+   @include tablet-900 {
+     display: flex;
+     flex-wrap: wrap;
+   }
+}
+.col {
+   flex-basis: 45%;
+   margin: 20px;
+}
+.question {
+   margin-bottom: 10px;
+   margin-top: auto;
+}
+.question-head, 
+.question-collapse {
+   background: #FFFFFF;
+   box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
+   border-radius: 10px;
+   position: relative;
+}
+.question-head {
+   cursor: pointer;
+   position: relative;
+   min-height: 90px;
+   display: flex;
+   align-items: center;
+}
+.question__title {
+   @include text (500, 18px, 30px);
+   margin: 0;
+   max-width: 200px;
+   margin-left: 10px;
+   @include tablet-600 {
+      max-width: 400px;
+   }
+}
+.question-collapse {
+   min-height: 200px;
+   display: flex;
+   align-items: center;
+}
+.plus {
+   width: 2px;
+   height: 20px;
+   background: #EE4D47;
+   display: inline-block;
+   transform: rotate(90deg);
+   position: absolute;
+   right: 25px;
+   top: 30px;
+}
+.plus::after {
+   content: "";
+   width: 2px;
+   height: 20px;
+   background: #EE4D47;
+   display: inline-block;
+   transform: rotate(90deg);
+}
+.text--margin {
+   margin-left: 10px;
+}
